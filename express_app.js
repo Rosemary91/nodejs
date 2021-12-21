@@ -5,14 +5,14 @@ const server = express();
 const mongoose = require('mongoose');
 // const todo = require("./models/todo");
 const mongodb_url= 'mongodb://localhost/todos_db';
-const PORT = process.env.port || 4000
+const port = process.env.PORT || 4000
 
 
 server.use(express.json());
 
 
 
-server.listen(PORT, function(){
+server.listen(port, function(){
     console.log('server has started to run in express');
     mongoose.connect(mongodb_url)
     .then(function(){
